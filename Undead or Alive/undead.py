@@ -1,0 +1,5 @@
+str = input()
+if ":)" in str and ":(" in str: print("double agent")
+elif ":)" in str: print("alive")
+elif ":(" in str: print("undead")
+else: print("machine")
