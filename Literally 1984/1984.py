@@ -1,2 +1,1 @@
-s = input()
-print("Literally 1984") if s == "1984" else print("Not 1984... yet")
+print("Literally 1984") if input() == "1984" else print("Not 1984... yet")
