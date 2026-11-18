@@ -1,0 +1,7 @@
+s = input().split("-")
+a = int(s[0])
+b = int(s[1])
+if (a == 30 and b == 30) or (a == 30 and b < 28) or (b == 30 and a < 28) or (a > 21 and b < a - 2) or (b > 21 and a < b - 2): print("!")
+elif (a == 21 and a - b >= 2) or (a > 21 and a - b == 2) or (a == 21 and b < 19) or a == 30 : print("A")
+elif (b == 21 and b - a >= 2) or (b > 21 and b - a == 2) or (b == 21 and a < 19) or b == 30 : print("B")
+else: print("?")
