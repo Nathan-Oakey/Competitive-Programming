@@ -1,0 +1,5 @@
+line = input()
+a, b = line.split()
+a = int(a)
+b = int(b)
+print(a, b) if a <= b else print(b, a)
