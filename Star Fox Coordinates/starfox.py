@@ -1,0 +1,36 @@
+s = input().split(" ")
+if len(s) != 2: print(False)
+else:
+    a = s[0]; b = s[1]
+    if a[0] not in "+-" or b[0] not in "+": print(False)
+    else:
+        a = a.split("*")
+        b = b.split("*")
+        if len(a) != 2 or len(b) != 2: print(False)
+        elif not (1 <= len(a[0][1:]) <= 3) or not (1 <= len(b[0][1:]) <= 3): print(False)
+        elif not a[0][1:].isdigit() or not b[0][1:].isdigit(): print(False)
+        else:
+            la = int(a[0])
+            lo = int(b[0])
+            a = a[1].split("'")
+            b = b[1].split("'")
+            if len(a) != 2 or len(b) != 2: print(False)
+            elif len(a[0]) != 2 or len(b[0]) != 2: print(False)
+            elif not a[0].isdigit() or not b[0].isdigit(): print(False)
+            else:
+                ma = int(a[0])
+                mb = int(b[0])
+                a = a[1].split('"')
+                b = b[1].split('"')
+                if len(a) != 2 or len(b) != 2: print(False)
+                elif len(a[0]) != 2 or len(b[0]) != 2: print(False)
+                elif not a[0].isdigit() or not b[0].isdigit(): print(False)
+                elif a[1] != "" or b[1] != "": print(False)
+                else:
+                    sa = int(a[0])
+                    sb = int(b[0])
+                    if abs(la) > 90 or lo > 360: print(False)
+                    elif ma > 59 or mb > 59 or sa > 59 or sb > 59: print(False)
+                    elif abs(la) == 90 and (ma != 0 or sa != 0): print(False)
+                    elif lo == 360 and (mb != 0 or sb != 0): print(False)
+                    else: print(True)
