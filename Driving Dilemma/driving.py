@@ -1,0 +1,1 @@
+print("MADE IT" if float(input()) * 22 / 15 > float(input()) / float(input()) else "FAILED TEST")
