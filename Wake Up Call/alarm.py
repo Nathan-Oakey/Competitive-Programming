@@ -1,0 +1,6 @@
+input()
+s1 = sum(i for i in list(map(int, input().split())))
+s2 = sum(i for i in list(map(int, input().split())))
+if s1 > s2: print("Button 1")
+elif s1 < s2: print("Button 2")
+else: print("Oh no")
